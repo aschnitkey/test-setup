@@ -371,6 +371,16 @@ img {
   list-style: none;
 }
 
+.lg-screen {
+  display: none;
+}
+
+.bg-primary {
+  background: #048ca8;
+  color: white;
+  padding: 2.5em;
+}
+
 h1, h2, h3, h4, h5, h6, p {
   margin: 0 0 .75em;
 }
@@ -384,6 +394,7 @@ h1 {
   font-weight: 300;
   line-height: 1.15;
   text-transform: uppercase;
+  letter-spacing: 3px;
 }
 
 h2 {
@@ -405,6 +416,21 @@ h2 {
 
 .cta .title-large {
   font-weight: 900;
+}
+
+.title-box {
+  background: #d31869;
+  color: white;
+  margin: 0 auto;
+  padding: 2em;
+  -webkit-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  transform: translateY(50%);
+  max-width: 90%;
+}
+
+.title-box + .bg-primary {
+  padding-top: 8em;
 }
 
 .text-intro {
@@ -570,12 +596,8 @@ h2 {
   text-align: center;
 }
 
-.hero-img {
-  display: none;
-}
-
 .sales-points {
-  padding: 10vh 0;
+  padding: 10vh 0 0;
 }
 
 .sales-points .sale-point {
@@ -619,4 +641,10 @@ h2 {
 .btn-secondary:hover, .btn-secondary:focus {
   background: white;
   color: #048ca8;
+}
+
+@media (max-width: 495px) {
+  .sales-points {
+    margin-bottom: -4em;
+  }
 }
