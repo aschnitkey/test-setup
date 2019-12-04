@@ -407,6 +407,7 @@ h2 {
 .title-large {
   font-size: 3rem;
   font-weight: 300;
+  line-height: .9;
 }
 
 .title-large span {
@@ -431,6 +432,17 @@ h2 {
 
 .title-box + .bg-primary {
   padding-top: 8em;
+}
+
+.title-footer {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  line-height: 1;
+  padding: .6em 0;
+  max-width: 60%;
+  margin: 0 auto 1em;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .text-intro {
@@ -612,6 +624,58 @@ h2 {
   margin-bottom: 0;
 }
 
+footer {
+  background: #444;
+  color: white;
+  padding: 5em 0;
+  position: relative;
+}
+
+footer::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: url(../img/logo.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.05;
+}
+
+footer a {
+  color: white;
+}
+
+.social-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 3rem;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  opacity: .8;
+  margin: .7em 0;
+}
+
+.nav-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.nav-footer a {
+  text-decoration: none;
+  font-weight: 700;
+}
+
 .btn {
   display: inline-block;
   padding: .75em 2.5em;
@@ -643,8 +707,27 @@ h2 {
   color: #048ca8;
 }
 
+.cta {
+  background-color: #16db93;
+  background-image: url(../img/call-to-action-background.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 5em 0;
+  background-blend-mode: multiply;
+  color: white;
+}
+
 @media (max-width: 495px) {
   .sales-points {
     margin-bottom: -4em;
+  }
+  .cta h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .title-footer {
+    max-width: 100%;
   }
 }
