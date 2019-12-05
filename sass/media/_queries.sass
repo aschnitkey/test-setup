@@ -10,3 +10,85 @@
 @media (max-width: 900px)
     .title-footer 
         max-width: 100%
+
+@media (min-width: 725px)
+    .lg-screen 
+        display: block
+
+    .col 
+        padding: 0 .75em
+
+        &:first-of-type 
+            padding-left: 0
+
+        &:last-of-type 
+            padding-right: 0
+
+    .col-half
+        flex-basis: 50%
+
+    .col-2
+        flex-basis: 66.66666%
+
+    .col-3 
+        flex-basis: 33.33333%
+
+    .promo
+        .bg-primary
+            text-align: left
+            padding-left: 2em
+    .hero
+        text-align: left
+        padding-bottom: 0
+        min-height: 800px
+        height: 80vmin
+
+    .hero-text 
+        margin-top: 10vmax
+
+    .sales-points
+        .sale-point
+            &:first-of-type
+                margin-top: 0
+
+    .title-box
+        max-width: 700px
+    
+    .img-box
+        padding: 0
+
+    .cta 
+        padding: 10em 0
+        position: relative
+        overflow: hidden
+
+        &::before,
+        &::after 
+            content: ''
+            display: block 
+            background: $accent
+            position: absolute
+            width: 100%
+            border: 1em solid $white
+
+        &::before 
+            top: 0
+            bottom: -1em
+            left: -100%
+            transform: skewX(60deg)
+
+        &::after 
+            top: -1em
+            bottom: 0
+            right: -100%
+            transform: skewX(60deg)
+
+    .container-cta
+        max-width: 500px
+
+    .container-footer 
+        max-width: 25em
+
+    .main-nav
+        &.is-open 
+            left: 70%

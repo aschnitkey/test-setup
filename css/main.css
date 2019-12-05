@@ -344,6 +344,26 @@ template {
   display: none;
 }
 
+.grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.col {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+}
+
+.col-full {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+}
+
 *, *::before, *::after {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -439,7 +459,7 @@ h2 {
   letter-spacing: 3px;
   line-height: 1;
   padding: .6em 0;
-  max-width: 60%;
+  max-width: 100%;
   margin: 0 auto 1em;
   border-top: 1px solid rgba(255, 255, 255, 0.25);
   border-bottom: 1px solid rgba(255, 255, 255, 0.25);
@@ -447,26 +467,6 @@ h2 {
 
 .text-intro {
   font-size: 1.2rem;
-}
-
-.grid {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.col {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 100%;
-  flex: 0 0 100%;
-}
-
-.col-full {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 100%;
-  flex: 0 0 100%;
 }
 
 .main-nav {
@@ -624,6 +624,17 @@ h2 {
   margin-bottom: 0;
 }
 
+.promo .bg-primary {
+  padding-top: 10em;
+  padding-bottom: 7.5em;
+}
+
+.img-box {
+  background: url(../img/phone-in-hand.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
 footer {
   background: #444;
   color: white;
@@ -729,5 +740,92 @@ footer a {
 @media (max-width: 900px) {
   .title-footer {
     max-width: 100%;
+  }
+}
+
+@media (min-width: 725px) {
+  .lg-screen {
+    display: block;
+  }
+  .col {
+    padding: 0 .75em;
+  }
+  .col:first-of-type {
+    padding-left: 0;
+  }
+  .col:last-of-type {
+    padding-right: 0;
+  }
+  .col-half {
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+  }
+  .col-2 {
+    -ms-flex-preferred-size: 66.66666%;
+    flex-basis: 66.66666%;
+  }
+  .col-3 {
+    -ms-flex-preferred-size: 33.33333%;
+    flex-basis: 33.33333%;
+  }
+  .promo .bg-primary {
+    text-align: left;
+    padding-left: 2em;
+  }
+  .hero {
+    text-align: left;
+    padding-bottom: 0;
+    min-height: 800px;
+    height: 80vmin;
+  }
+  .hero-text {
+    margin-top: 10vmax;
+  }
+  .sales-points .sale-point:first-of-type {
+    margin-top: 0;
+  }
+  .title-box {
+    max-width: 700px;
+  }
+  .img-box {
+    padding: 0;
+  }
+  .cta {
+    padding: 10em 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta::before, .cta::after {
+    content: '';
+    display: block;
+    background: #d31869;
+    position: absolute;
+    width: 100%;
+    border: 1em solid white;
+  }
+  .cta::before {
+    top: 0;
+    bottom: -1em;
+    left: -100%;
+    -webkit-transform: skewX(60deg);
+    -ms-transform: skewX(60deg);
+    transform: skewX(60deg);
+  }
+  .cta::after {
+    top: -1em;
+    bottom: 0;
+    right: -100%;
+    -webkit-transform: skewX(60deg);
+    -ms-transform: skewX(60deg);
+    transform: skewX(60deg);
+  }
+  .container-cta {
+    max-width: 500px;
+  }
+  .container-footer {
+    max-width: 25em;
+  }
+  .main-nav.is-open {
+    left: 70%;
   }
 }
